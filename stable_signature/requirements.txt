@@ -1,0 +1,11 @@
+omegaconf
+einops
+transformers
+open_clip_torch
+torchmetrics
+scipy
+augly
+scikit-image
+pytorch-fid
+pandas
+matplotlib

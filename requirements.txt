@@ -1,0 +1,25 @@
+lpips
+clean-fid
+torch
+transformers
+accelerate
+diffusers
+huggingface_hub==0.25.0 
+safetensors
+Pillow
+importlib-metadata
+numpy
+scipy
+scikit-image
+lpips
+pytorch-fid
+opencv-python
+matplotlib
+
+# for submodules
+wandb
+datasets
+scikit-learn
+ftfy
+tqdm
+
