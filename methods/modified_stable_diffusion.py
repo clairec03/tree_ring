@@ -330,12 +330,24 @@ class ModifiedStableDiffusionPipeline(StableDiffusionXLPipeline):
         )
 
         # 4. Prepare timesteps
+        # print("num_inference_steps in __call__", num_inference_steps)
         timesteps, num_inference_steps = retrieve_timesteps(
             self.scheduler, num_inference_steps, device, timesteps, sigmas
         )
 
+        # print("=========START OF __call__============")
+
         # 5. Prepare latent variables
+        # print("calling modified stable diffusion")
+        # print("height", height)
+        # print("width", width)
+
+        # print("self.vae.config")
+        # print(self.vae.config)
+
         num_channels_latents = self.unet.config.in_channels
+        # print("num channels latents", num_channels_latents)
+
         latents = self.prepare_latents(
             batch_size * num_images_per_prompt,
             num_channels_latents,
@@ -346,9 +358,15 @@ class ModifiedStableDiffusionPipeline(StableDiffusionXLPipeline):
             generator,
             latents,
         )
+        
+        # import pdb; pdb.set_trace()
+
+        # print(self.unet.config)
 
         # 5+ Add Watermark
         init_latents = copy.deepcopy(latents)
+        
+        # print("initial latents shape - __call__", latents.shape)
 
         if key is not None:
 
@@ -358,6 +376,9 @@ class ModifiedStableDiffusionPipeline(StableDiffusionXLPipeline):
             
             # inject watermark
             init_latents = inject_watermark(init_latents, watermarking_mask, gt_patch)
+            
+            # print("==========END OF __call__===========")
+            # print("initial latents shape after wm, __call__", init_latents.shape)
 
 
         # # watermarking mask
@@ -512,7 +533,7 @@ class ModifiedStableDiffusionPipeline(StableDiffusionXLPipeline):
                     xm.mark_step()
 
         if not output_type == "latent":
-            # make sure the VAE is in float32 mode, as it overflows in float16
+            # make sure the VAE is in float16 mode, as it overflows in float16
             needs_upcasting = self.vae.dtype == torch.float16 and self.vae.config.force_upcast
 
             if needs_upcasting:

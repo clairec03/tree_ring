@@ -18,13 +18,14 @@ import torch
 from methods.inverse_stable_diffusion import InversableStableDiffusionPipeline
 from methods.modified_stable_diffusion import retrieve_timesteps
 from diffusers import DPMSolverMultistepScheduler
-import open_clip
 from methods.optim_utils import inject_watermark, get_watermarking_pattern, get_watermarking_mask, eval_watermark
 from methods.io_utils import *
 from methods._detect import detect_key
 from diffusers import AutoencoderKL, UNet2DConditionModel, DDIMScheduler 
 from transformers import CLIPTextModel, CLIPTokenizer
 from torchvision import transforms
+
+import time
 
 class BaseWatermarkedDiffusionPipeline:
     def __init__(self, device: str = "cuda"):
@@ -37,22 +38,21 @@ class BaseWatermarkedDiffusionPipeline:
         repo = "ByteDance/SDXL-Lightning"
         checkpoint = "sdxl_lightning_4step_unet.safetensors"
         
-        scheduler = DPMSolverMultistepScheduler.from_pretrained(base, subfolder='scheduler')
+        # scheduler = DPMSolverMultistepScheduler.from_pretrained(base, subfolder='scheduler')
 
         # Initialize pipeline
         pipe = StableDiffusionXLPipeline.from_pretrained(
             base,
-            scheduler=scheduler,
             torch_dtype=torch.float16,
             variant="fp16"
         ).to(self.device)
         
         # # Set up scheduler
-        # pipe.scheduler = EulerDiscreteScheduler.from_config(
-        #     pipe.scheduler.config,
-        #     timestep_spacing="trailing",
-        #     prediction_type="epsilon"
-        # )
+        pipe.scheduler = EulerDiscreteScheduler.from_config(
+            pipe.scheduler.config,
+            timestep_spacing="trailing",
+            prediction_type="epsilon"
+        )
         
         # Load the model weights
         pipe.unet.load_state_dict(
@@ -81,6 +81,9 @@ class BaseWatermarkedDiffusionPipeline:
             guidance_scale=0,
             **generate_kwargs
         ).images[0]
+
+        # Save the image
+        image.save(f"generated_image_{time.time()}.png")
 
         return image
 
@@ -207,8 +210,8 @@ class TreeRingWatermark:
             transforms.ToTensor() # convert to torch tensor 
         ]) 
         # Apply the transformation 
-        image_tensor = transform(image)
-        image_latents_w = pipe.get_image_latents(image_tensor, sample=False)
+        # image_tensor = transform(image)
+        # image_latents_w = pipe.get_image_latents(image_tensor, sample=False)
 
         # reversed_latents_w = pipe.forward_diffusion(
         #     latents=image_latents_w,

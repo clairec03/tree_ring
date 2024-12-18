@@ -1,0 +1,490 @@
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031
+Image latents before inversion: tensor([[[[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]],
+
+         [[nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          ...,
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan],
+          [nan, nan, nan,  ..., nan, nan, nan]]]], device='cuda:0',
+       dtype=torch.float16, grad_fn=<MulBackward0>)
+NaNs or Infs found in image_latents before inversion
+NaNs or Infs found in inverted_latents_fft for key 0
+key 0 dist 56.603004455566406
+NaNs or Infs found in inverted_latents_fft for key 1
+key 1 dist 56.04907989501953
+NaNs or Infs found in inverted_latents_fft for key 2
+key 2 dist 56.232261657714844
+NaNs or Infs found in inverted_latents_fft for key 3
+key 3 dist 56.11968994140625
+NaNs or Infs found in inverted_latents_fft for key 4
+key 4 dist 56.7800178527832
+NaNs or Infs found in inverted_latents_fft for key 5
+key 5 dist 55.56220245361328
+NaNs or Infs found in inverted_latents_fft for key 6
+key 6 dist 57.88665008544922
+NaNs or Infs found in inverted_latents_fft for key 7
+key 7 dist 55.77375793457031

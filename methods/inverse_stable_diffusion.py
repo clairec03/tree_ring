@@ -2,16 +2,11 @@
 
 
 from functools import partial
-from typing import Callable, List, Optional, Union, Tuple
+from typing import Callable, Optional
 
 import torch
-from transformers import CLIPFeatureExtractor, CLIPTextModel, CLIPTokenizer
-
+from transformers import CLIPTextModel, CLIPTokenizer
 from diffusers.models import AutoencoderKL, UNet2DConditionModel
-# from diffusers import StableDiffusionPipeline
-from diffusers.pipelines.stable_diffusion.safety_checker import \
-    StableDiffusionSafetyChecker
-from diffusers.schedulers import DDIMScheduler,PNDMScheduler, LMSDiscreteScheduler
 
 from diffusers import AutoencoderKL, UNet2DConditionModel
 from transformers import (
@@ -79,7 +74,6 @@ class InversableStableDiffusionPipeline(ModifiedStableDiffusionPipeline):
             generator,
             latents,
         )
-
         return latents
 
     @torch.inference_mode()
@@ -95,19 +89,48 @@ class InversableStableDiffusionPipeline(ModifiedStableDiffusionPipeline):
         return text_embeddings
     
     @torch.inference_mode()
-    def get_image_latents(self, image, sample=True, rng_generator=None):
+    def get_image_latents(self, image, sample=False, rng_generator=None):
+        # Load the SDXL VAE (Variational Autoencoder)
+        vae = AutoencoderKL.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", subfolder="vae", 
+            torch_dtype=torch.float16).to("cuda")
+        
+        # import pdb; pdb.set_trace()
+        
+        # Load the image
         if len(image.shape) == 3:
             image = image.unsqueeze(0)
+        
+        # # Preprocess the image
+        # processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14", torch_dtype=torch.float16)
+        # processed_image = processor(images=image, return_tensors="pt")["pixel_values"]
+        
+        # # Convert image to latent space
+        # # Resize and normalize the image
+        # image_tensor = processed_image.to(vae.device, dtype=torch.float16)
+        
+        # Encode the image to latent space
+        latent_embedding = vae.encode(image).latent_dist.mode()
+        
+        return latent_embedding
 
-        image = image.to(torch.float16).to(self.device)
+
+
+
+    # @torch.inference_mode()
+    # def get_image_latents(self, image, sample=False, rng_generator=None):
+    #     if len(image.shape) == 3:
+    #         image = image.unsqueeze(0)
+    #     import pdb; pdb.set_trace();
+
+    #     image = image.to(torch.float16).to(self.device)
             
-        encoding_dist = self.vae.encode(image).latent_dist
-        if sample:
-            encoding = encoding_dist.sample(generator=rng_generator)
-        else:
-            encoding = encoding_dist.mode()
-        latents = encoding * 0.18215
-        return latents
+    #     encoding_dist = self.vae.encode(image).latent_dist
+    #     if sample:
+    #         encoding = encoding_dist.sample(generator=rng_generator)
+    #     else:
+    #         encoding = encoding_dist.mode()
+    #     latents = encoding * 0.18215
+    #     return latents
 
 
     @torch.inference_mode()

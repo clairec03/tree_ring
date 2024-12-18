@@ -4,6 +4,7 @@ import logging
 from PIL import Image
 from importlib import import_module
 from registry import BASELINE_METHODS, BASELINE_TEAMS, STUDENT_TEAMS
+import numpy as np
 
 
 class Battle:
@@ -22,7 +23,7 @@ class Battle:
         logging.basicConfig(level=logging.INFO)
         return logging.getLogger(__name__)
 
-    def run_battles(self, red_team_name: str, blue_team_name: str, prompts: list, key: int = 99):
+    def run_battles(self, red_team_name: str, blue_team_name: str, prompts: list, key: int = 7):
         """
         Execute battles for a list of prompts and save all images.
 
@@ -70,6 +71,7 @@ class Battle:
 
         for idx, prompt in enumerate(prompts):
             # Generate image with watermark
+            key = np.random.randint(0, 8)
             generated_image = watermarked_pipeline.generate(prompt, key=key)
             generated_image_path = self.generated_images_dir / f"generated_image_{idx}.png"
             generated_image.save(generated_image_path)
@@ -86,7 +88,7 @@ class Battle:
             # Detect watermark using the Blue Team's pipeline
             extracted_key = watermarked_pipeline.detect(attacked_image)
             detection_success = (extracted_key == key)
-            self.logger.info(f"Extracted key: {extracted_key}")
+            self.logger.info(f"Extracted key: {extracted_key}; Correct key: {key}")
             self.logger.info(f"Watermark detection successful: {detection_success}")
 
             results.append({

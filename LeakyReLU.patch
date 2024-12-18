@@ -1,0 +1,67 @@
+--- /home/vk352/anaconda3/envs/rnns_vk/lib/python3.6/site-packages/torch/nn/modules/activation.py
++++ /home/vk352/anaconda3/envs/rnns_vk/lib/python3.6/site-packages/torch/nn/modules/activation.py
+@@ -1,5 +1,5 @@
+ class LeakyReLU(Module):
+-    r"""Applies the LeakyReLU function element-wise.
++    r"""Applies the element-wise function:
+ 
+     .. math::
+         \text{LeakyReLU}(x) = \max(0, x) + \text{negative\_slope} * \min(0, x)
+@@ -8,23 +8,22 @@
+     or
+ 
+     .. math::
+-        \text{LeakyReLU}(x) =
++        \text{LeakyRELU}(x) =
+         \begin{cases}
+         x, & \text{ if } x \geq 0 \\
+         \text{negative\_slope} \times x, & \text{ otherwise }
+         \end{cases}
+ 
+     Args:
+-        negative_slope: Controls the angle of the negative slope (which is used for
+-          negative input values). Default: 1e-2
++        negative_slope: Controls the angle of the negative slope. Default: 1e-2
+         inplace: can optionally do the operation in-place. Default: ``False``
+ 
+     Shape:
+-        - Input: :math:`(*)` where `*` means, any number of additional
++        - Input: :math:`(N, *)` where `*` means, any number of additional
+           dimensions
+-        - Output: :math:`(*)`, same shape as the input
++        - Output: :math:`(N, *)`, same shape as the input
+ 
+-    .. image:: ../scripts/activation_images/LeakyReLU.png
++    .. image:: scripts/activation_images/LeakyReLU.png
+ 
+     Examples::
+ 
+@@ -32,20 +31,18 @@
+         >>> input = torch.randn(2)
+         >>> output = m(input)
+     """
++    __constants__ = ['inplace', 'negative_slope']
+ 
+-    __constants__ = ["inplace", "negative_slope"]
+-    inplace: bool
+-    negative_slope: float
+-
+-    def __init__(self, negative_slope: float = 1e-2, inplace: bool = False) -> None:
+-        super().__init__()
++    def __init__(self, negative_slope=1e-2, inplace=False):
++        super(LeakyReLU, self).__init__()
+         self.negative_slope = negative_slope
+         self.inplace = inplace
+ 
+-    def forward(self, input: Tensor) -> Tensor:
++    @weak_script_method
++    def forward(self, input):
+         return F.leaky_relu(input, self.negative_slope, self.inplace)
+ 
+-    def extra_repr(self) -> str:
+-        inplace_str = ", inplace=True" if self.inplace else ""
+-        return f"negative_slope={self.negative_slope}{inplace_str}"
++    def extra_repr(self):
++        inplace_str = ', inplace' if self.inplace else ''
++        return 'negative_slope={}{}'.format(self.negative_slope, inplace_str)
+ 

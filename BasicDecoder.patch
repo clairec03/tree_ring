@@ -1,0 +1,30 @@
+--- ../steganogan/decoders.py
++++ ../steganogan/decoders.py
+@@ -2,7 +2,6 @@
+     """
+     The BasicDecoder module takes an steganographic image and attempts to decode
+     the embedded data tensor.
+-
+     Input: (N, 3, H, W)
+     Output: (N, D, H, W)
+     """
+@@ -18,16 +17,16 @@
+     def _build_models(self):
+         self.layers = nn.Sequential(
+             self._conv2d(3, self.hidden_size),
++            nn.BatchNorm2d(self.hidden_size),
+             nn.LeakyReLU(inplace=True),
+-            nn.BatchNorm2d(self.hidden_size),
+ 
+             self._conv2d(self.hidden_size, self.hidden_size),
++            nn.BatchNorm2d(self.hidden_size),
+             nn.LeakyReLU(inplace=True),
+-            nn.BatchNorm2d(self.hidden_size),
+ 
+             self._conv2d(self.hidden_size, self.hidden_size),
++            nn.BatchNorm2d(self.hidden_size),
+             nn.LeakyReLU(inplace=True),
+-            nn.BatchNorm2d(self.hidden_size),
+ 
+             self._conv2d(self.hidden_size, self.data_depth)
+         )
